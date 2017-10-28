@@ -69,22 +69,22 @@ app.post('/send', (req, res) => {
       tls:{
         rejectUnauthorized:false
       }
-    });
-
-    // setup email data with unicode symbols
-    let mailOptions = {
-        from: config.from,
-        to: config.to,
-        subject: config.subject,
-        html: output
-    };
-
-    // send mail with defined transport object
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            res.render(config.theme, {msg: failAlert});
-        }
-
-        res.render(config.theme, {msg: successAlert});
-    });
   });
+
+  // setup email data with unicode symbols
+  let mailOptions = {
+      from: config.from,
+      to: config.to,
+      subject: config.subject,
+      html: output
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          res.render(config.theme, {msg: failAlert});
+      }
+
+      res.render(config.theme, {msg: successAlert});
+  });
+});
