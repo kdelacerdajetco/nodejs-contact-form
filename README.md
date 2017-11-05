@@ -1,6 +1,9 @@
 # Node Contact Form
 Contact form build with UIkit and Nodemailer
 
+### Demo
+[Demo Page](https://nodejs-contact-form-e6527.firebaseapp.com/demo)
+
 ### Installation
 Install the dependencies and start the server.
 ```
@@ -31,5 +34,3 @@ module.exports = {
   subject: 'Contact Us', // Subject
 };
 ```
-### Screenshot
-[![N|Solid](https://rezkyfm.com/images/portofolios/nodejs-contact-form.png)](https://github.com/rezkyfm/nodejs-contact-form)
